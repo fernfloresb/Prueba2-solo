@@ -1,0 +1,62 @@
+{% extends 'appizza/base.html' %}
+{% load static %}
+
+{% block content %}
+<body>
+
+    <h1 class="fondo"> Pizza Steve Online </h1>
+<center>    
+<nav>
+
+
+
+            <div class="container centrar">
+            <div class="col-sm-10" >
+            
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active imgb">
+                                <img class="d-block w-100" src="{% static 'appizza/img/bolognesa.jpg'%} " width=800 height=500 alt="First slide" data-interval="5000"> 
+                                <div class="carousel-caption d-none d-md-block">
+                                        <h3>Promoción boglonesa + bebida </h3>
+                                        <p style="background-color: black;"> Promoción válida de lunes a jueves entre las 12:00pm y 18:00pm</p>
+                                </div>
+                            
+                              </div>
+                              <div class="carousel-item imgb">
+                                <img class="d-block w-100" src="{% static 'appizza/img/vegiie.jpg'%}" width=800 height=500 alt="Second slide" data-interval="5000">
+                                <div class="carousel-caption d-none d-md-block">
+                                        <h3>Promoción vegie + bebida </h3>
+                                        <p style="background-color: black;"> Promoción válida de lunes a jueves entre las 12:00pm y 18:00pm</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item imgb">
+                                <img class="d-block w-100" src="{% static 'appizza/img/superpepperoni.jpg'%}" width=800 height=500 alt="Third slide" data-interval="5000">
+                                <div class="carousel-caption d-none d-md-block">
+                                        <h3>Promoción pepperoni + bebida </h3>
+                                        <p style="background-color: black;"> Promoción válida de lunes a jueves entre las 12:00pm y 18:00pm</p>
+                                </div>
+                              </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                          </div>
+            
+            </div>
+            </div>
+    </nav>
+</center>
+
+</body>
+{% endblock %}

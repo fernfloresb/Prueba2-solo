@@ -1,0 +1,97 @@
+{% extends 'appizza/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<body>
+        <nav>
+        
+            <h1 class="fondo"> Registro </h1>
+        
+        <div class="container centrar fondo">
+            <br class="fondo2 container">
+                <form action="" name="formulario" method="get">
+                    <p> Nombre: <input class ="izquierda1" type="text" id="nombre" name="nombre" size="95" onkeypress="return soloLetras(event)" required placeholder="Nombre" ></p>
+                    
+                    <p>Apellido: <input type="text" id="apellido" name="apellido" size="95" onkeypress="return soloLetras(event)" required placeholder="Apellido" ></p>
+                    
+                    <p>RUT: <input type="text" id="rut" name="rut" required oninput="checkRut(this)" placeholder="Ingrese RUT">
+                    
+                    <p>Fecha de nacimiento: <input type="date" id="fechanac" name="fechanac"></p>
+                    
+                    <p>Telefono: <input type="text" id="telef" name="telef" size="95" maxlength="12" onkeypress="return soloNumeros(event)" required placeholder="+569........"></p>
+                    
+                    <p>E-mail: <input type="email" id="email" name="email" size="95" required placeholder="Correo electronico"></p>
+                    
+                    <p>Contraseña: <input type="password" id="password" name="password" size="95" maxlength="30" required placeholder="Contraseña"></p>
+        
+                    <p><input type="submit" id="btn" value="Crear cuenta" class="btn btn-primary"></p>	
+        
+                </form>
+            </br>
+            <script>
+            (function()
+            {
+                var formulario = document.getElementsByName('formulario')[0],
+                elementos = formulario.elements,
+                boton=document.getElementById('btn');
+        
+                var validarNombre = function(e)
+                {
+                    if(formulario.nombre.value==0){
+                        alert("no ha ingresado nombre");
+                        e.preventDefault();
+                    }
+                };
+        
+                var validarApellido = function(e)
+                {
+                    if(formulario.apellido.value==0){
+                        alert("no ha ingresado Apellido");
+                        e.preventDefault();
+                    }
+                };
+                
+                var validarRut = function(e)
+                {
+                    if(formulario.rut.value==0){
+                        alert("no ha ingresado rut");
+                        e.preventDefault();
+                    }
+                };
+        
+                var validarTelefono = function(e)
+                {
+                    if(formulario.telefono.value==0){
+                        alert("no ha ingresado telefono ");
+                        e.preventDefault();
+                    }
+                };
+        
+                var validarCorreo = function(e)
+                {
+                    if(formulario.email.value==0){
+                        alert("no ha ingresado correo electronico");
+                        e.preventDefault();
+                    }
+                };
+        
+                var validar = function(e){
+                    validarNombre(e);
+                    validarApellido(e);
+                    validarRut(e);
+                    validarTelefono(e);
+                    validarCorreo(e);
+                };
+        
+                formulario.addEventListener("submit", validar);
+        
+            }()
+            )
+            </script>
+        </div>
+        
+        </nav>
+    </body>
+
+{% endblock %}
